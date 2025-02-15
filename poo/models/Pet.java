@@ -5,6 +5,8 @@ public class Pet {
     String raça;
     String porte;
     String alimentação;
+    int idade;
+    
 
     public Pet(String nome, String raça, String porte, String alimentação, int idade) {
         this.nome = nome;
@@ -44,6 +46,5 @@ public class Pet {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-    int idade;
    
 }
