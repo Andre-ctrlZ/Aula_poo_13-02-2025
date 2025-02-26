@@ -19,5 +19,4 @@ public class Placa_mae extends Computador{
         return "Placa_mae [Marca=" + Marca + ", Soquete=" + Soquete + ", Modelo=" + Modelo + "]";
     }
 
-    
 }

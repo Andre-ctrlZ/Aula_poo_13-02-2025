@@ -1,19 +1,9 @@
 public class Disp_armazenamento extends Computador{
-    private String Capacidade_armazenamento;
     private String Tipo_conexao;
-    
+
     public Disp_armazenamento(String marca, String modelo, String capacidade_armazenamento, String tipo_conexao) {
-        super(marca, modelo);
-        Capacidade_armazenamento = capacidade_armazenamento;
+        super(marca, modelo, capacidade_armazenamento);
         Tipo_conexao = tipo_conexao;
-    }
-
-    public String getCapacidade_armazenamento() {
-        return Capacidade_armazenamento;
-    }
-
-    public void setCapacidade_armazenamento(String capacidade_armazenamento) {
-        Capacidade_armazenamento = capacidade_armazenamento;
     }
 
     public String getTipo_conexao() {
@@ -26,9 +16,8 @@ public class Disp_armazenamento extends Computador{
 
     @Override
     public String toString() {
-        return "Disp_armazenamento [Marca=" + Marca + ", Capacidade_armazenamento=" + Capacidade_armazenamento
-                + ", Modelo=" + Modelo + ", Tipo_conexao=" + Tipo_conexao + "]";
+        return "Disp_armazenamento [Marca=" + Marca + ", Tipo_conexao=" + Tipo_conexao + ", Modelo=" + Modelo
+                + ", Capacidade_armazenamento=" + Capacidade_armazenamento + "]";
     }
-
     
 }
