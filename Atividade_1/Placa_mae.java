@@ -3,7 +3,7 @@ public class Placa_mae extends Computador{
 
     public Placa_mae(String marca, String modelo, String soquete) {
         super(marca, modelo);
-        Soquete = soquete;
+        this.Soquete = soquete;
     }
 
     public String getSoquete() {

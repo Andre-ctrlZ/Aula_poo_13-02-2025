@@ -3,7 +3,7 @@ public class Disp_armazenamento extends Computador{
 
     public Disp_armazenamento(String marca, String modelo, String capacidade_armazenamento, String tipo_conexao) {
         super(marca, modelo, capacidade_armazenamento);
-        Tipo_conexao = tipo_conexao;
+        this.Tipo_conexao = tipo_conexao;
     }
 
     public String getTipo_conexao() {
