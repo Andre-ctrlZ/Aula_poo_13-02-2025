@@ -16,8 +16,7 @@ public class Disp_armazenamento extends Computador{
 
     @Override
     public String toString() {
-        return "Disp_armazenamento [Marca=" + Marca + ", Tipo_conexao=" + Tipo_conexao + ", Modelo=" + Modelo
-                + ", Capacidade_armazenamento=" + Capacidade_armazenamento + "]";
+        return "Disp_armazenamento [Tipo_conexao=" + Tipo_conexao + "]" + super.toStringMarcaModeloCapacidade();
     }
     
 }

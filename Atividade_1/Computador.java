@@ -8,24 +8,23 @@ public abstract class Computador {
     }
 
     public Computador(String marca, String modelo) {
-        Marca = marca;
-        Modelo = modelo;
+        this.Marca = marca;
+        this.Modelo = modelo;
     }
 
     public Computador(String marca, String modelo, String capacidade_armazenamento) {
-        Marca = marca;
-        Modelo = modelo;
-        Capacidade_armazenamento = capacidade_armazenamento;
+        this.Marca = marca;
+        this.Modelo = modelo;
+        this.Capacidade_armazenamento = capacidade_armazenamento;
     }
 
     public Computador(String marca, String modelo, String capacidade_armazenamento, String frequencia) {
-        Marca = marca;
-        Modelo = modelo;
-        Capacidade_armazenamento = capacidade_armazenamento;
-        Frequencia = frequencia;
+        this.Marca = marca;
+        this.Modelo = modelo;
+        this.Capacidade_armazenamento = capacidade_armazenamento;
+        this.Frequencia = frequencia;
     }
 
-    
     public String toStringMarcaModeloCapacidadeFrequencia() {
         return "Computador [Marca=" + Marca + ", Modelo=" + Modelo + ", Capacidade_armazenamento="
                 + Capacidade_armazenamento + ", Frequencia=" + Frequencia + "]";
@@ -38,5 +37,10 @@ public abstract class Computador {
     public String toStringMarcaModeloFrequencia(){
         return "Computador [Marca=" + Marca + ", Modelo=" + Modelo + " Frequencia=" + Frequencia + "]";
     }
-    
+
+    public String toStringMarcaModeloCapacidade() {
+        return "Computador [Marca=" + Marca + ", Modelo=" + Modelo + ", Capacidade_armazenamento="
+                + Capacidade_armazenamento + "]";
+    }
+
 }

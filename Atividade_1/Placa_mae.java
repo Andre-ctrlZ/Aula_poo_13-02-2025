@@ -16,7 +16,7 @@ public class Placa_mae extends Computador{
 
     @Override
     public String toString() {
-        return "Placa_mae [Marca=" + Marca + ", Soquete=" + Soquete + ", Modelo=" + Modelo + "]";
+        return "Placa_mae [Soquete=" + Soquete + "]" + super.toStringMarcaModelo();
     }
 
 }
