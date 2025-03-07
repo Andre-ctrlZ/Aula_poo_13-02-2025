@@ -6,6 +6,7 @@ public abstract class Funcionario {
     protected Sexo Sexo;
     protected Setor Setor;
     protected Double SalarioBase;
+    protected boolean status; // true = admitido, false = demitido
 
     public Funcionario(){}
 
@@ -15,6 +16,7 @@ public abstract class Funcionario {
         this.Sexo = Sexo;
         this.Setor = Setor;
         this.SalarioBase = SalarioBase;
+        this.status = false; // Por padrão, o funcionário está demitido
     }
 
     public String getNome() {
@@ -57,9 +59,19 @@ public abstract class Funcionario {
         this.SalarioBase = SalarioBase;
     }
 
+    public boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
-        return "nome: " + nome + "Data de nascimento: " + DataNascimento + "Sexo: " + Sexo + "Setor: " + Setor + "Salario: " + SalarioBase;
+        return "Funcionario - nome: " + nome + " - Data de Nascimento: " + DataNascimento +
+               " - Sexo: " + Sexo + " - Setor: " + Setor + " - Salario: " + SalarioBase +
+               " - Status: " + (status ? "Admitido" : "Demitido");
     }
 
     public abstract Double getSalarioFinal();
