@@ -1,7 +1,6 @@
 public class Diretor extends Funcionario{
     public double Premio = 0.2;
 
-   
     public Diretor(String Nome, String DataNascimento, Sexo Sexo, Setor Setor, Double SalarioBase){
         super(Nome, DataNascimento, Sexo, Setor, SalarioBase);
     }
