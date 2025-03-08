@@ -1,12 +1,14 @@
 package Atividade2;
 
-public abstract class Funcionario2 implements SalarioFinal{
+public abstract class Funcionario2 extends CargoDeConfianca implements SalarioFinal {
     protected String nome;
     protected String DataNascimento;
     protected Double SalarioBase;
     protected boolean status; // true = admitido, false = demitido
 
-    public Funcionario2(){}
+    public Funcionario2() {
+        super();
+    }
 
     public Funcionario2(String nome, String DataNascimento, Double SalarioBase){
         this.nome = nome;
