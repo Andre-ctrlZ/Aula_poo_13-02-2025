@@ -1,20 +1,16 @@
+package Atividade2;
 
-
-public abstract class Funcionario {
+public abstract class Funcionario2 implements SalarioFinal{
     protected String nome;
     protected String DataNascimento;
-    protected Sexo Sexo;
-    protected Setor Setor;
     protected Double SalarioBase;
     protected boolean status; // true = admitido, false = demitido
 
-    public Funcionario(){}
+    public Funcionario2(){}
 
-    public Funcionario(String nome, String DataNascimento, Sexo Sexo, Setor Setor, Double SalarioBase){
+    public Funcionario2(String nome, String DataNascimento, Double SalarioBase){
         this.nome = nome;
         this.DataNascimento = DataNascimento;
-        this.Sexo = Sexo;
-        this.Setor = Setor;
         this.SalarioBase = SalarioBase;
         this.status = false; // Por padrão, o funcionário está demitido
     }
@@ -35,22 +31,6 @@ public abstract class Funcionario {
         this.DataNascimento = DataNascimento;
     }
 
-    public Sexo getSexo() {
-        return Sexo;
-    }
-
-    public void setSexo(Sexo Sexo) {
-        this.Sexo = Sexo;
-    }
-
-    public Setor getSetor() {
-        return Setor;
-    }
-
-    public void setSetor(Setor Setor) {
-        this.Setor = Setor;
-    }
-
     public Double getSalarioBase() {
         return SalarioBase;
     }
@@ -69,10 +49,10 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario - nome: " + nome + " - Data de Nascimento: " + DataNascimento +
-               " - Sexo: " + Sexo + " - Setor: " + Setor + " - Salario: " + SalarioBase +
+        return "Funcionario - nome: " + nome + " - Data de Nascimento: " + DataNascimento + " - Salario: " + SalarioBase +
                " - Status: " + (status ? "Admitido" : "Demitido");
     }
 
     public abstract Double getSalarioFinal();
+
 }

@@ -1,3 +1,5 @@
+package Atividade1;
+
 public class Diretor extends Funcionario implements Contratacao{
     public double Premio = 0.2;
 
