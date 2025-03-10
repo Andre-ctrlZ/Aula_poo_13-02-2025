@@ -1,22 +1,29 @@
 package Atividade2;
 
-public abstract class Funcionario2 extends CargoDeConfianca implements SalarioFinal {
+public abstract class Funcionario2 implements SalarioFinal {
     protected String nome;
     protected String DataNascimento;
     protected Double SalarioBase;
+    protected Setor setor;
     protected boolean status; // true = admitido, false = demitido
-
-    public Funcionario2() {
-        super();
-    }
+    //protected Bonificados bonificados;
 
     public Funcionario2(String nome, String DataNascimento, Double SalarioBase){
         this.nome = nome;
         this.DataNascimento = DataNascimento;
         this.SalarioBase = SalarioBase;
         this.status = false; // Por padrão, o funcionário está demitido
+        //this.bonificados = bonificados;
     }
 
+    public Setor getSetor() {
+        return setor;
+    }
+
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -51,10 +58,9 @@ public abstract class Funcionario2 extends CargoDeConfianca implements SalarioFi
 
     @Override
     public String toString() {
-        return "Funcionario - nome: " + nome + " - Data de Nascimento: " + DataNascimento + " - Salario: " + SalarioBase +
+        return "Funcionario - nome: " + nome + " - Data de Nascimento: " + DataNascimento + " - Salario: " + SalarioBase + 
                " - Status: " + (status ? "Admitido" : "Demitido");
     }
 
     public abstract Double getSalarioFinal();
-
 }
