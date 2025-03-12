@@ -15,6 +15,13 @@ public class Main {
         Operardor operario = new Operardor("João Pereira", "1992-07-23", 3000.00);
         gerente.Admitir(operario);  // Admitido
 
+        Diretor diretor = new Diretor("El Peludito", "1980-03-11", 8000.00, Bonificados.DIRETOR);
+        diretor.setStatus(true);  // Admitido
+
+        // Exibindo as informações do Diretor
+        System.out.println(diretor);
+        System.out.println("Salário Final do Diretor: " + diretor.getSalarioFinal());
+
         // Exibindo as informações do Operário
         System.out.println(operario);
         System.out.println(" Salário Final do Operário: " + operario.getSalarioFinal());
